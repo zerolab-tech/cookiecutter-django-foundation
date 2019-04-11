@@ -74,7 +74,7 @@ function inliner(cssPath) {
       removeLinkTags: false
     })
     .pipe($.replace, "<!-- media inline placeholder (DON'T DELETE ME) -->", `<style>${mqCss}</style>`)
-    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="{% static \'css/app.css\' %}">', '')
+    .pipe($.replace, '<link rel="stylesheet" type="text/css" href="{{ "{% static \'css/app.css\' %}" }}">', '')
     .pipe($.htmlmin, {
       collapseWhitespace: true,
       minifyCSS: true

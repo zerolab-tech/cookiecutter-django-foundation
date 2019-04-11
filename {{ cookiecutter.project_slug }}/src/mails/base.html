@@ -5,10 +5,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% raw %}{% static 'css/app.css' %}{% endraw %}">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{% block mail_title %}{% endblock %}</title>
+  <title>{% raw %}{% block mail_title %}{% endblock %}{% endraw %}</title>
   <!-- <style> -->
 </head>
 <body>
@@ -17,7 +17,7 @@
     <tr>
       <td class="center" align="center" valign="top">
         <center>
-          {% block content %}{% endblock %}
+          {% raw %}{% block content %}{% endblock %}{% end raw %}
         </center>
       </td>
     </tr>
